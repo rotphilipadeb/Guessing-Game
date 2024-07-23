@@ -1,0 +1,49 @@
+import random
+
+def guess_game():
+    print("Welcome to the Guessing Game!")
+    print("Choose a difficulty level:")
+    print("1. Easy (10 attempts)")
+    print("2. Medium (7 attempts)")
+    print("3. Hard (4 attempts)")
+
+    while True:
+        try:
+            difficulty = int(input("Enter the number corresponding to your choice: "))
+            if difficulty == 1:
+                attempts = 10
+                break
+            elif difficulty == 2:
+                attempts = 7
+                break
+            elif difficulty == 3:
+                attempts = 4
+                break
+            else:
+                print("Invalid choice. Please choose 1, 2, or 3.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+    number_to_guess = random.randint(1, 100)
+    print("\nI've picked a number between 1 and 100. Try to guess it!")
+
+    for attempt in range(1, attempts + 1):
+        while True:
+            try:
+                guess = int(input(f"Attempt {attempt}/{attempts}: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+
+        if guess < number_to_guess:
+            print("Too low!")
+        elif guess > number_to_guess:
+            print("Too high!")
+        else:
+            print("Congratulations! You got the answer correct!")
+            return
+
+    print(f"Sorry, you've used all {attempts} attempts. The number was {number_to_guess}.")
+
+if __name__ == "__main__":
+    guess_game()
