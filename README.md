@@ -1,6 +1,8 @@
 # Guessing-Game
 The Guessing Game allows users to guess the correct number picked by the computer. 
-<img src="guess-game.jfif" alt="Guess Game" width="600" height="400">
+<img src="guess-game.jfif" alt="Guess Game" width="800" height="550">
+<p></p>
+<p></p>
 <h2>Explanation:</h2>
 <p><b>Game Initialization:</b> The game starts with a welcome message and prompts the player to choose a difficulty level.</p>
 <p><b>Difficulty Levels:</b> The player can choose between Easy (10 attempts), Medium (7 attempts), and Hard (4 attempts). Input validation ensures only valid choices are accepted.</p>
